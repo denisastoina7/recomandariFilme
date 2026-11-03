@@ -12,7 +12,7 @@ def afiseaza_catalog(filme):
     print("\n=== CATALOG DE FILME ===")
     for index, film in enumerate(filme):
         print(f"{index + 1}. {film['titlu']} - Genuri: {', '.join(film['genuri'])}")
-    print("========================\n")
+    print("\n")
 
 # Funcția 2: Gestionează alegerea utilizatorului
 def alege_film_preferat(filme, favorite):
@@ -36,7 +36,7 @@ def alege_film_preferat(filme, favorite):
                 
                 print(f"\n✅ Ai ales cu succes filmul: {film_ales['titlu']}!")
                 print(f"Lista ta de favorite conține acum ID-urile: {favorite}")
-                break # Oprește bucla după o alegere corectă
+                break 
                 
             else:
                 print(f"❌ Te rog să alegi un număr valid între 1 și {len(filme)}.\n")
