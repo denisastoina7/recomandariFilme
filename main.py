@@ -34,15 +34,15 @@ def alege_film_preferat(filme, favorite):
                 if film_ales['id'] not in favorite:
                     favorite.append(film_ales['id'])
                 
-                print(f"\n✅ Ai ales cu succes filmul: {film_ales['titlu']}!")
+                print(f"\n Ai ales cu succes filmul: {film_ales['titlu']}!")
                 print(f"Lista ta de favorite conține acum ID-urile: {favorite}")
                 break 
                 
             else:
-                print(f"❌ Te rog să alegi un număr valid între 1 și {len(filme)}.\n")
+                print(f" Te rog să alegi un număr valid între 1 și {len(filme)}.\n")
                 
         except ValueError:
-            print("❌ EROARE: Te rog să introduci doar o CIFRĂ (ex: 1, 2, 3).\n")
+            print(" EROARE: Te rog să introduci doar o CIFRĂ (ex: 1, 2, 3).\n")
 # Apelăm prima funcție pentru a afișa lista
 afiseaza_catalog(catalog_filme)
 
