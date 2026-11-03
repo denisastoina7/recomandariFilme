@@ -43,9 +43,6 @@ def alege_film_preferat(filme, favorite):
                 
         except ValueError:
             print("❌ EROARE: Te rog să introduci doar o CIFRĂ (ex: 1, 2, 3).\n")
-
-# --- EXECUȚIA PRINCIPALĂ A PROGRAMULUI ---
-
 # Apelăm prima funcție pentru a afișa lista
 afiseaza_catalog(catalog_filme)
 
