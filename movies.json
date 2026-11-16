@@ -1,0 +1,962 @@
+[
+    {
+        "id": 1,
+        "title": "The Dark Knight",
+        "genre": "Acțiune",
+        "year": 2008
+    },
+    {
+        "id": 2,
+        "title": "Inception",
+        "genre": "Acțiune",
+        "year": 2010
+    },
+    {
+        "id": 3,
+        "title": "The Matrix",
+        "genre": "Acțiune",
+        "year": 1999
+    },
+    {
+        "id": 4,
+        "title": "Gladiator",
+        "genre": "Acțiune",
+        "year": 2000
+    },
+    {
+        "id": 5,
+        "title": "Mad Max: Fury Road",
+        "genre": "Acțiune",
+        "year": 2015
+    },
+    {
+        "id": 6,
+        "title": "John Wick",
+        "genre": "Acțiune",
+        "year": 2014
+    },
+    {
+        "id": 7,
+        "title": "Die Hard",
+        "genre": "Acțiune",
+        "year": 1988
+    },
+    {
+        "id": 8,
+        "title": "Terminator 2: Judgment Day",
+        "genre": "Acțiune",
+        "year": 1991
+    },
+    {
+        "id": 9,
+        "title": "Avengers: Endgame",
+        "genre": "Acțiune",
+        "year": 2019
+    },
+    {
+        "id": 10,
+        "title": "Jurassic Park",
+        "genre": "Aventură",
+        "year": 1993
+    },
+    {
+        "id": 11,
+        "title": "Indiana Jones and the Raiders of the Lost Ark",
+        "genre": "Aventură",
+        "year": 1981
+    },
+    {
+        "id": 12,
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "genre": "Aventură",
+        "year": 2003
+    },
+    {
+        "id": 13,
+        "title": "Back to the Future",
+        "genre": "Aventură",
+        "year": 1985
+    },
+    {
+        "id": 14,
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "genre": "Aventură",
+        "year": 2001
+    },
+    {
+        "id": 15,
+        "title": "The Lord of the Rings: The Two Towers",
+        "genre": "Aventură",
+        "year": 2002
+    },
+    {
+        "id": 16,
+        "title": "The Lord of the Rings: The Return of the King",
+        "genre": "Aventură",
+        "year": 2003
+    },
+    {
+        "id": 17,
+        "title": "Spider-Man: No Way Home",
+        "genre": "Acțiune",
+        "year": 2021
+    },
+    {
+        "id": 18,
+        "title": "Léon: The Professional",
+        "genre": "Acțiune",
+        "year": 1994
+    },
+    {
+        "id": 19,
+        "title": "V for Vendetta",
+        "genre": "Acțiune",
+        "year": 2005
+    },
+    {
+        "id": 20,
+        "title": "Kill Bill: Vol. 1",
+        "genre": "Acțiune",
+        "year": 2003
+    },
+    {
+        "id": 21,
+        "title": "Kill Bill: Vol. 2",
+        "genre": "Acțiune",
+        "year": 2004
+    },
+    {
+        "id": 22,
+        "title": "Casino Royale",
+        "genre": "Acțiune",
+        "year": 2006
+    },
+    {
+        "id": 23,
+        "title": "Mission: Impossible - Fallout",
+        "genre": "Acțiune",
+        "year": 2018
+    },
+    {
+        "id": 24,
+        "title": "Logan",
+        "genre": "Acțiune",
+        "year": 2017
+    },
+    {
+        "id": 25,
+        "title": "Batman Begins",
+        "genre": "Acțiune",
+        "year": 2005
+    },
+    {
+        "id": 26,
+        "title": "The Dark Knight Rises",
+        "genre": "Acțiune",
+        "year": 2012
+    },
+    {
+        "id": 27,
+        "title": "Interstellar",
+        "genre": "Science-Fiction",
+        "year": 2014
+    },
+    {
+        "id": 28,
+        "title": "Avatar",
+        "genre": "Science-Fiction",
+        "year": 2009
+    },
+    {
+        "id": 29,
+        "title": "Blade Runner 2049",
+        "genre": "Science-Fiction",
+        "year": 2017
+    },
+    {
+        "id": 30,
+        "title": "Dune",
+        "genre": "Science-Fiction",
+        "year": 2021
+    },
+    {
+        "id": 31,
+        "title": "Alien",
+        "genre": "Science-Fiction",
+        "year": 1979
+    },
+    {
+        "id": 32,
+        "title": "Aliens",
+        "genre": "Science-Fiction",
+        "year": 1986
+    },
+    {
+        "id": 33,
+        "title": "The Terminator",
+        "genre": "Science-Fiction",
+        "year": 1984
+    },
+    {
+        "id": 34,
+        "title": "Arrival",
+        "genre": "Science-Fiction",
+        "year": 2016
+    },
+    {
+        "id": 35,
+        "title": "The Martian",
+        "genre": "Science-Fiction",
+        "year": 2015
+    },
+    {
+        "id": 36,
+        "title": "Ex Machina",
+        "genre": "Science-Fiction",
+        "year": 2014
+    },
+    {
+        "id": 37,
+        "title": "Star Wars: Episode IV - A New Hope",
+        "genre": "Science-Fiction",
+        "year": 1977
+    },
+    {
+        "id": 38,
+        "title": "Star Wars: Episode V - The Empire Strikes Back",
+        "genre": "Science-Fiction",
+        "year": 1980
+    },
+    {
+        "id": 39,
+        "title": "Gravity",
+        "genre": "Science-Fiction",
+        "year": 2013
+    },
+    {
+        "id": 40,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "genre": "Fantasy",
+        "year": 2001
+    },
+    {
+        "id": 41,
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "genre": "Fantasy",
+        "year": 2011
+    },
+    {
+        "id": 42,
+        "title": "Pan's Labyrinth",
+        "genre": "Fantasy",
+        "year": 2006
+    },
+    {
+        "id": 43,
+        "title": "The Hobbit: An Unexpected Journey",
+        "genre": "Fantasy",
+        "year": 2012
+    },
+    {
+        "id": 44,
+        "title": "Avatar: The Way of Water",
+        "genre": "Science-Fiction",
+        "year": 2022
+    },
+    {
+        "id": 45,
+        "title": "The Shawshank Redemption",
+        "genre": "Dramă",
+        "year": 1994
+    },
+    {
+        "id": 46,
+        "title": "Forrest Gump",
+        "genre": "Dramă",
+        "year": 1994
+    },
+    {
+        "id": 47,
+        "title": "Fight Club",
+        "genre": "Dramă",
+        "year": 1999
+    },
+    {
+        "id": 48,
+        "title": "The Godfather",
+        "genre": "Dramă",
+        "year": 1972
+    },
+    {
+        "id": 49,
+        "title": "The Godfather: Part II",
+        "genre": "Dramă",
+        "year": 1974
+    },
+    {
+        "id": 50,
+        "title": "Schindler's List",
+        "genre": "Dramă",
+        "year": 1993
+    },
+    {
+        "id": 51,
+        "title": "Joker",
+        "genre": "Dramă",
+        "year": 2019
+    },
+    {
+        "id": 52,
+        "title": "The Green Mile",
+        "genre": "Dramă",
+        "year": 1999
+    },
+    {
+        "id": 53,
+        "title": "12 Angry Men",
+        "genre": "Dramă",
+        "year": 1957
+    },
+    {
+        "id": 54,
+        "title": "Good Will Hunting",
+        "genre": "Dramă",
+        "year": 1997
+    },
+    {
+        "id": 55,
+        "title": "Requiem for a Dream",
+        "genre": "Dramă",
+        "year": 2000
+    },
+    {
+        "id": 56,
+        "title": "American Beauty",
+        "genre": "Dramă",
+        "year": 1999
+    },
+    {
+        "id": 57,
+        "title": "A Beautiful Mind",
+        "genre": "Dramă",
+        "year": 2001
+    },
+    {
+        "id": 58,
+        "title": "The Pursuit of Happyness",
+        "genre": "Dramă",
+        "year": 2006
+    },
+    {
+        "id": 59,
+        "title": "There Will Be Blood",
+        "genre": "Dramă",
+        "year": 2007
+    },
+    {
+        "id": 60,
+        "title": "No Country for Old Men",
+        "genre": "Dramă",
+        "year": 2007
+    },
+    {
+        "id": 61,
+        "title": "Gran Torino",
+        "genre": "Dramă",
+        "year": 2008
+    },
+    {
+        "id": 62,
+        "title": "Dead Poets Society",
+        "genre": "Dramă",
+        "year": 1989
+    },
+    {
+        "id": 63,
+        "title": "Catch Me If You Can",
+        "genre": "Dramă",
+        "year": 2002
+    },
+    {
+        "id": 64,
+        "title": "The Truman Show",
+        "genre": "Dramă",
+        "year": 1998
+    },
+    {
+        "id": 65,
+        "title": "Rocky",
+        "genre": "Dramă",
+        "year": 1976
+    },
+    {
+        "id": 66,
+        "title": "Braveheart",
+        "genre": "Dramă",
+        "year": 1995
+    },
+    {
+        "id": 67,
+        "title": "Million Dollar Baby",
+        "genre": "Dramă",
+        "year": 2004
+    },
+    {
+        "id": 68,
+        "title": "Slumdog Millionaire",
+        "genre": "Dramă",
+        "year": 2008
+    },
+    {
+        "id": 69,
+        "title": "Pulp Fiction",
+        "genre": "Crimă",
+        "year": 1994
+    },
+    {
+        "id": 70,
+        "title": "Se7en",
+        "genre": "Thriller",
+        "year": 1995
+    },
+    {
+        "id": 71,
+        "title": "The Silence of the Lambs",
+        "genre": "Thriller",
+        "year": 1991
+    },
+    {
+        "id": 72,
+        "title": "The Prestige",
+        "genre": "Mister",
+        "year": 2006
+    },
+    {
+        "id": 73,
+        "title": "Shutter Island",
+        "genre": "Mister",
+        "year": 2010
+    },
+    {
+        "id": 74,
+        "title": "Gone Girl",
+        "genre": "Mister",
+        "year": 2014
+    },
+    {
+        "id": 75,
+        "title": "Knives Out",
+        "genre": "Mister",
+        "year": 2019
+    },
+    {
+        "id": 76,
+        "title": "Parasite",
+        "genre": "Thriller",
+        "year": 2019
+    },
+    {
+        "id": 77,
+        "title": "Prisoners",
+        "genre": "Thriller",
+        "year": 2013
+    },
+    {
+        "id": 78,
+        "title": "Zodiac",
+        "genre": "Mister",
+        "year": 2007
+    },
+    {
+        "id": 79,
+        "title": "The Departed",
+        "genre": "Crimă",
+        "year": 2006
+    },
+    {
+        "id": 80,
+        "title": "Goodfellas",
+        "genre": "Crimă",
+        "year": 1990
+    },
+    {
+        "id": 81,
+        "title": "The Usual Suspects",
+        "genre": "Mister",
+        "year": 1995
+    },
+    {
+        "id": 82,
+        "title": "Memento",
+        "genre": "Mister",
+        "year": 2000
+    },
+    {
+        "id": 83,
+        "title": "Scarface",
+        "genre": "Crimă",
+        "year": 1983
+    },
+    {
+        "id": 84,
+        "title": "Reservoir Dogs",
+        "genre": "Crimă",
+        "year": 1992
+    },
+    {
+        "id": 85,
+        "title": "Fargo",
+        "genre": "Crimă",
+        "year": 1996
+    },
+    {
+        "id": 86,
+        "title": "Nightcrawler",
+        "genre": "Thriller",
+        "year": 2014
+    },
+    {
+        "id": 87,
+        "title": "Snatch",
+        "genre": "Crimă",
+        "year": 2000
+    },
+    {
+        "id": 88,
+        "title": "Heat",
+        "genre": "Crimă",
+        "year": 1995
+    },
+    {
+        "id": 89,
+        "title": "L.A. Confidential",
+        "genre": "Mister",
+        "year": 1997
+    },
+    {
+        "id": 90,
+        "title": "Sicario",
+        "genre": "Thriller",
+        "year": 2015
+    },
+    {
+        "id": 91,
+        "title": "The Sixth Sense",
+        "genre": "Mister",
+        "year": 1999
+    },
+    {
+        "id": 92,
+        "title": "Mystic River",
+        "genre": "Mister",
+        "year": 2003
+    },
+    {
+        "id": 93,
+        "title": "The Shining",
+        "genre": "Horror",
+        "year": 1980
+    },
+    {
+        "id": 94,
+        "title": "Psycho",
+        "genre": "Horror",
+        "year": 1960
+    },
+    {
+        "id": 95,
+        "title": "The Conjuring",
+        "genre": "Horror",
+        "year": 2013
+    },
+    {
+        "id": 96,
+        "title": "The Exorcist",
+        "genre": "Horror",
+        "year": 1973
+    },
+    {
+        "id": 97,
+        "title": "Halloween",
+        "genre": "Horror",
+        "year": 1978
+    },
+    {
+        "id": 98,
+        "title": "A Nightmare on Elm Street",
+        "genre": "Horror",
+        "year": 1984
+    },
+    {
+        "id": 99,
+        "title": "Hereditary",
+        "genre": "Horror",
+        "year": 2018
+    },
+    {
+        "id": 100,
+        "title": "Get Out",
+        "genre": "Psihologic",
+        "year": 2017
+    },
+    {
+        "id": 101,
+        "title": "Black Swan",
+        "genre": "Psihologic",
+        "year": 2010
+    },
+    {
+        "id": 102,
+        "title": "Split",
+        "genre": "Psihologic",
+        "year": 2016
+    },
+    {
+        "id": 103,
+        "title": "Donnie Darko",
+        "genre": "Psihologic",
+        "year": 2001
+    },
+    {
+        "id": 104,
+        "title": "A Clockwork Orange",
+        "genre": "Psihologic",
+        "year": 1971
+    },
+    {
+        "id": 105,
+        "title": "The Thing",
+        "genre": "Horror",
+        "year": 1982
+    },
+    {
+        "id": 106,
+        "title": "It",
+        "genre": "Horror",
+        "year": 2017
+    },
+    {
+        "id": 107,
+        "title": "Scream",
+        "genre": "Horror",
+        "year": 1996
+    },
+    {
+        "id": 108,
+        "title": "Saw",
+        "genre": "Horror",
+        "year": 2004
+    },
+    {
+        "id": 109,
+        "title": "The Ring",
+        "genre": "Horror",
+        "year": 2002
+    },
+    {
+        "id": 110,
+        "title": "Sinister",
+        "genre": "Horror",
+        "year": 2012
+    },
+    {
+        "id": 111,
+        "title": "The Hangover",
+        "genre": "Comedie",
+        "year": 2009
+    },
+    {
+        "id": 112,
+        "title": "Superbad",
+        "genre": "Comedie",
+        "year": 2007
+    },
+    {
+        "id": 113,
+        "title": "Dumb and Dumber",
+        "genre": "Comedie",
+        "year": 1994
+    },
+    {
+        "id": 114,
+        "title": "Groundhog Day",
+        "genre": "Comedie",
+        "year": 1993
+    },
+    {
+        "id": 115,
+        "title": "Step Brothers",
+        "genre": "Comedie",
+        "year": 2008
+    },
+    {
+        "id": 116,
+        "title": "Titanic",
+        "genre": "Romantic",
+        "year": 1997
+    },
+    {
+        "id": 117,
+        "title": "Pride & Prejudice",
+        "genre": "Romantic",
+        "year": 2005
+    },
+    {
+        "id": 118,
+        "title": "La La Land",
+        "genre": "Romantic",
+        "year": 2016
+    },
+    {
+        "id": 119,
+        "title": "The Notebook",
+        "genre": "Romantic",
+        "year": 2004
+    },
+    {
+        "id": 120,
+        "title": "Casablanca",
+        "genre": "Romantic",
+        "year": 1942
+    },
+    {
+        "id": 121,
+        "title": "Crazy, Stupid, Love.",
+        "genre": "Romantic",
+        "year": 2011
+    },
+    {
+        "id": 122,
+        "title": "Silver Linings Playbook",
+        "genre": "Romantic",
+        "year": 2012
+    },
+    {
+        "id": 123,
+        "title": "500 Days of Summer",
+        "genre": "Romantic",
+        "year": 2009
+    },
+    {
+        "id": 124,
+        "title": "Amélie",
+        "genre": "Romantic",
+        "year": 2001
+    },
+    {
+        "id": 125,
+        "title": "Before Sunrise",
+        "genre": "Romantic",
+        "year": 1995
+    },
+    {
+        "id": 126,
+        "title": "The Grand Budapest Hotel",
+        "genre": "Comedie",
+        "year": 2014
+    },
+    {
+        "id": 127,
+        "title": "Tropic Thunder",
+        "genre": "Comedie",
+        "year": 2008
+    },
+    {
+        "id": 128,
+        "title": "Anchorman",
+        "genre": "Comedie",
+        "year": 2004
+    },
+    {
+        "id": 129,
+        "title": "Borat",
+        "genre": "Comedie",
+        "year": 2006
+    },
+    {
+        "id": 130,
+        "title": "Shaun of the Dead",
+        "genre": "Comedie",
+        "year": 2004
+    },
+    {
+        "id": 131,
+        "title": "Hot Fuzz",
+        "genre": "Comedie",
+        "year": 2007
+    },
+    {
+        "id": 132,
+        "title": "The Lion King",
+        "genre": "Animație",
+        "year": 1994
+    },
+    {
+        "id": 133,
+        "title": "Spider-Man: Into the Spider-Verse",
+        "genre": "Animație",
+        "year": 2018
+    },
+    {
+        "id": 134,
+        "title": "Spirited Away",
+        "genre": "Animație",
+        "year": 2001
+    },
+    {
+        "id": 135,
+        "title": "Toy Story",
+        "genre": "Animație",
+        "year": 1995
+    },
+    {
+        "id": 136,
+        "title": "WALL-E",
+        "genre": "Animație",
+        "year": 2008
+    },
+    {
+        "id": 137,
+        "title": "Coco",
+        "genre": "Animație",
+        "year": 2017
+    },
+    {
+        "id": 138,
+        "title": "Inside Out",
+        "genre": "Animație",
+        "year": 2015
+    },
+    {
+        "id": 139,
+        "title": "Up",
+        "genre": "Animație",
+        "year": 2009
+    },
+    {
+        "id": 140,
+        "title": "Finding Nemo",
+        "genre": "Animație",
+        "year": 2003
+    },
+    {
+        "id": 141,
+        "title": "Shrek",
+        "genre": "Animație",
+        "year": 2001
+    },
+    {
+        "id": 142,
+        "title": "How to Train Your Dragon",
+        "genre": "Animație",
+        "year": 2010
+    },
+    {
+        "id": 143,
+        "title": "Ratatouille",
+        "genre": "Animație",
+        "year": 2007
+    },
+    {
+        "id": 144,
+        "title": "The Incredibles",
+        "genre": "Animație",
+        "year": 2004
+    },
+    {
+        "id": 145,
+        "title": "Monsters, Inc.",
+        "genre": "Animație",
+        "year": 2001
+    },
+    {
+        "id": 146,
+        "title": "Princess Mononoke",
+        "genre": "Animație",
+        "year": 1997
+    },
+    {
+        "id": 147,
+        "title": "My Neighbor Totoro",
+        "genre": "Animație",
+        "year": 1988
+    },
+    {
+        "id": 148,
+        "title": "The Wolf of Wall Street",
+        "genre": "Biografic",
+        "year": 2013
+    },
+    {
+        "id": 149,
+        "title": "Oppenheimer",
+        "genre": "Biografic",
+        "year": 2023
+    },
+    {
+        "id": 150,
+        "title": "The Social Network",
+        "genre": "Biografic",
+        "year": 2010
+    },
+    {
+        "id": 151,
+        "title": "Bohemian Rhapsody",
+        "genre": "Biografic",
+        "year": 2018
+    },
+    {
+        "id": 152,
+        "title": "Axe Hacksaw Ridge",
+        "genre": "Istoric",
+        "year": 2016
+    },
+    {
+        "id": 153,
+        "title": "1917",
+        "genre": "Istoric",
+        "year": 2019
+    },
+    {
+        "id": 154,
+        "title": "Dunkirk",
+        "genre": "Istoric",
+        "year": 2017
+    },
+    {
+        "id": 155,
+        "title": "The Pianist",
+        "genre": "Istoric",
+        "year": 2002
+    },
+    {
+        "id": 156,
+        "title": "Apollo 13",
+        "genre": "Biografic",
+        "year": 1995
+    },
+    {
+        "id": 157,
+        "title": "The Imitation Game",
+        "genre": "Biografic",
+        "year": 2014
+    },
+    {
+        "id": 158,
+        "title": "The Theory of Everything",
+        "genre": "Biografic",
+        "year": 2014
+    },
+    {
+        "id": 159,
+        "title": "Lincoln",
+        "genre": "Istoric",
+        "year": 2012
+    },
+    {
+        "id": 160,
+        "title": "The King's Speech",
+        "genre": "Istoric",
+        "year": 2010
+    }
+]
