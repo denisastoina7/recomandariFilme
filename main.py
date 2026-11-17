@@ -151,7 +151,7 @@ def load_movies():
     return extended_movies
 
 # ==========================================
-# 3. ALGORITM HYBRID COLLABORATIVE FILTERING
+# 3. ALGORITM DE RECOMANDARE (HIBRID)
 # ==========================================
 def build_interaction_matrix():
     users = load_users()
@@ -175,7 +175,6 @@ def get_user_means(interaction_matrix):
     return means
 
 def calculate_user_similarity(target_user, other_user, interaction_matrix):
-    """Calculează Cosine Similarity clasic pentru User-Based CF."""
     target_ratings = interaction_matrix.get(target_user, {})
     other_ratings = interaction_matrix.get(other_user, {})
     
@@ -201,7 +200,6 @@ def calculate_user_similarity(target_user, other_user, interaction_matrix):
     return sim, common_evals
 
 def calculate_adjusted_cosine(item_i, item_j, interaction_matrix, user_means):
-    """Calculează Adjusted Cosine Similarity pentru Item-Based CF, luând în calcul mediile utilizatorilor."""
     num = 0.0
     den_i = 0.0
     den_j = 0.0
@@ -248,21 +246,17 @@ def generate_hybrid_recommendations(target_user, limit=20):
     target_ratings = interaction_matrix[target_user]
     user_means = get_user_means(interaction_matrix)
     
-    # Pre-calculare utilizatori similari pentru componenta User-Based
     neighbors = get_similar_users(target_user, interaction_matrix, limit=15)
     
     movie_dict = {m["id"]: m for m in movies}
     recommendations = []
     
-    # Greutatea alocată celor 2 algoritmi (poate varia, 0.5 = balanță egală)
     alpha = 0.5 
     
     for mid, movie in movie_dict.items():
-        # Sărim filmele pe care utilizatorul le-a evaluat deja (fie +1, fie -1)
         if mid in target_ratings:
             continue
             
-        # COMPONENTA 1: User-Based Prediction
         u_num, u_den = 0.0, 0.0
         liked_by_neighbors = 0
         highest_sim_liked = 0.0
@@ -281,33 +275,29 @@ def generate_hybrid_recommendations(target_user, limit=20):
                     
         pred_user = u_num / u_den if u_den > 0 else None
         
-        # COMPONENTA 2: Item-Based Prediction (Adjusted Cosine)
         i_num, i_den = 0.0, 0.0
         for rated_mid, r_target in target_ratings.items():
-            # Pentru optimizare, calculăm similitudinea la rulare doar între itemul analizat și cele evaluate de user
             sim_ij = calculate_adjusted_cosine(mid, rated_mid, interaction_matrix, user_means)
             
-            if sim_ij > 0: # Ponderăm doar prin corelații pozitive de tipar
+            if sim_ij > 0:
                 i_num += sim_ij * r_target
                 i_den += abs(sim_ij)
                 
         pred_item = i_num / i_den if i_den > 0 else None
         
-        # COMBINARE HIBRIDĂ
         hybrid_score = None
         explanation = ""
         
         if pred_user is not None and pred_item is not None:
             hybrid_score = alpha * pred_user + (1 - alpha) * pred_item
-            explanation = f"Recomandare hibridă: Apreciat de {liked_by_neighbors} utilizatori asemănători ție (sim. {round(highest_sim_liked*100, 1)}%) și se potrivește cu structura altor filme preferate."
+            explanation = f"Apreciat de {liked_by_neighbors} utilizatori asemănători ție (similitudine {round(highest_sim_liked*100, 1)}%) și se potrivește cu profilul filmelor preferate de tine."
         elif pred_user is not None:
             hybrid_score = pred_user
-            explanation = f"Colaborativ (User-Based): Apreciat de {liked_by_neighbors} utilizatori cu preferințe asemănătoare cu ale tale (sim. {round(highest_sim_liked*100, 1)}%)."
+            explanation = f"Apreciat de {liked_by_neighbors} utilizatori cu preferințe asemănătoare cu ale tale (similitudine {round(highest_sim_liked*100, 1)}%)."
         elif pred_item is not None:
             hybrid_score = pred_item
-            explanation = "Colaborativ (Item-Based): Foarte similar ca tipar de vot cu filme pe care deja le-ai apreciat."
+            explanation = "Se potrivește îndeaproape cu alte filme pe care le-ai evaluat pozitiv."
             
-        # Recomandăm doar dacă scorul este strict pozitiv
         if hybrid_score is not None and hybrid_score > 0:
             presentation_score = ((hybrid_score + 1) / 2) * 100
             recommendations.append({
@@ -333,7 +323,7 @@ class MovieApp(QWidget):
         self.initUI()
         
     def initUI(self):
-        self.setWindowTitle("Recomandări Filme Hibrid PRO")
+        self.setWindowTitle("Recomandări Filme PRO")
         self.resize(1000, 850)
         self.setStyleSheet("background-color: #1e1e2e; color: #cdd6f4; font-family: 'Segoe UI', Arial;")
         
@@ -430,7 +420,7 @@ class MovieApp(QWidget):
         self.setup_recommendations_tab()
         
         self.tabs.addTab(self.tab_catalog, "📚 Catalog Filme")
-        self.tabs.addTab(self.tab_recommendations, "✨ Recomandări Hibride (User & Item)")
+        self.tabs.addTab(self.tab_recommendations, "✨ Recomandări pentru Tine")
         
         self.main_layout.addWidget(self.tabs)
         widget.setLayout(self.main_layout)
@@ -687,7 +677,7 @@ class MovieApp(QWidget):
         target_evaluated = len(favs) + len(unfavs)
         
         if target_evaluated == 0:
-            lbl = QLabel("Nu ai evaluat încă niciun film.\nPentru recomandări hibride precise, marchează cu ❤️ sau 👎 câteva filme din Catalog.")
+            lbl = QLabel("Nu ai evaluat încă niciun film.\nPentru recomandări precise, marchează cu ❤️ sau 👎 câteva filme din Catalog.")
             lbl.setStyleSheet("color: #a6adc8; font-size: 14px;")
             lbl.setAlignment(Qt.AlignCenter)
             self.recs_layout.addWidget(lbl)
@@ -698,7 +688,7 @@ class MovieApp(QWidget):
             
         # --- A. UTILIZATORI CU PREFERINȚE ASEMĂNĂTOARE ---
         if similar_users:
-            title_a = QLabel("A. Utilizatori cu preferințe asemănătoare (User-CF)")
+            title_a = QLabel("A. Utilizatori cu preferințe asemănătoare")
             title_a.setFont(QFont("Segoe UI", 16, QFont.Bold))
             title_a.setStyleSheet("color: #89b4fa; padding-bottom: 5px;")
             self.recs_layout.addWidget(title_a)
@@ -742,19 +732,19 @@ class MovieApp(QWidget):
             self.recs_layout.addWidget(sim_scroll)
             self.add_separator(self.recs_layout)
         else:
-            lbl = QLabel("Nu există utilizatori similari. Ne vom baza recomandările exclusiv pe proprietățile filmelor (Item-CF).")
+            lbl = QLabel("Nu există utilizatori similari. Ne vom baza recomandările exclusiv pe proprietățile filmelor.")
             lbl.setStyleSheet("color: #bac2de; font-size: 13px; font-style: italic;")
             self.recs_layout.addWidget(lbl)
             self.add_separator(self.recs_layout)
         
         # --- B. FILME RECOMANDATE ---
-        title_b = QLabel("B. Filme recomandate pentru tine (Sistem Hibrid)")
+        title_b = QLabel("B. Filme recomandate pentru tine")
         title_b.setFont(QFont("Segoe UI", 16, QFont.Bold))
         title_b.setStyleSheet("color: #a6e3a1; padding-bottom: 5px;")
         self.recs_layout.addWidget(title_b)
         
         if not recommendations:
-            lbl = QLabel("Sistemul Hibrid nu a reușit să găsească corelații pozitive pe baza preferințelor tale actuale.")
+            lbl = QLabel("Nu au putut fi găsite corelații pozitive pe baza preferințelor tale actuale.")
             lbl.setStyleSheet("color: #a6adc8; font-size: 14px;")
             self.recs_layout.addWidget(lbl)
         else:
